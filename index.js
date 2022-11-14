@@ -28,6 +28,8 @@ function verifyJWT(req, res, next) {
             return res.status(401).send({ message: 'Unauthorized Access' });
         }
         req.decoded = decoded;
+
+
         next();
     })
 }
